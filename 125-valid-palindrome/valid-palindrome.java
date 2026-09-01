@@ -9,8 +9,16 @@ class Solution {
             }
         }
         
-        String temp1 = sb.toString();
-        String temp2 = sb.reverse().toString();
-        return temp1.equals(temp2);
+        int left=0;
+        int right=sb.length()-1;
+
+        while(left<right){
+            if(sb.charAt(left)!=sb.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 }

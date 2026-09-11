@@ -17,14 +17,14 @@ class Solution {
     public int kthSmallest(TreeNode root, int k) {
         List<Integer> ele=new ArrayList<>();
         addEle(root,ele);
-        Collections.sort(ele);
         return ele.get(k-1);
 
     }
     private void addEle(TreeNode node,List<Integer> list){
         if(node==null)return;
-        list.add(node.val);
+        
         addEle(node.left,list);
+        list.add(node.val);
         addEle(node.right,list);
     }
 }

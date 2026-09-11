@@ -21,11 +21,10 @@ class Solution {
         return ele.get(k-1);
 
     }
-    private List<Integer> addEle(TreeNode node,List<Integer> list){
-        if(node==null)return list;
+    private void addEle(TreeNode node,List<Integer> list){
+        if(node==null)return;
         list.add(node.val);
         addEle(node.left,list);
         addEle(node.right,list);
-        return list;
     }
 }
